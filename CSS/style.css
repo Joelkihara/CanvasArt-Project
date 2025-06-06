@@ -2279,3 +2279,40 @@ form button:hover {
     padding: 0.5rem 1rem;
   }
 }
+
+/* Hide navLinks by default on mobile */
+#navLinks {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Show when .show class is added by JS */
+#navLinks.show {
+  display: flex;
+}
+
+/* Hide .nav-left and .nav-right on mobile */
+@media (max-width: 768px) {
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+}
